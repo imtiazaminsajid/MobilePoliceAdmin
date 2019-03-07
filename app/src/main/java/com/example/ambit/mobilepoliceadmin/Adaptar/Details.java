@@ -3,7 +3,10 @@ package com.example.ambit.mobilepoliceadmin.Adaptar;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -58,7 +61,8 @@ public class Details extends RecyclerView.Adapter<Details.MyViewHolder> {
         return allDetails.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener,
+            View.OnCreateContextMenuListener, MenuItem.OnMenuItemClickListener {
 
         TextView crimeType, crimeDateTime, withnessPhone, crimeLocation,crimeDetails,crimeLat,crimeLon;
         ImageView crimePicture;
@@ -77,6 +81,7 @@ public class Details extends RecyclerView.Adapter<Details.MyViewHolder> {
             crimePicture =  itemView.findViewById(R.id.crimePhoto);
 
             itemView.setOnClickListener(this);
+            itemView.setOnCreateContextMenuListener(this);
         }
 
         @Override
@@ -91,10 +96,38 @@ public class Details extends RecyclerView.Adapter<Details.MyViewHolder> {
             }
 
         }
+
+        @Override
+        public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+
+            MenuItem delete =  menu.add(Menu.NONE, 1, 1, "Delete Report");
+
+            delete.setOnMenuItemClickListener(this);
+
+        }
+
+        @Override
+        public boolean onMenuItemClick(MenuItem item) {
+
+            if (listener!=null){
+                int position = getAdapterPosition();
+
+                if (position!=RecyclerView.NO_POSITION){
+
+                    switch (item.getItemId()){
+                        case 1:
+                            listener.onDelete(position);
+                    }
+                }
+            }
+
+            return false;
+        }
     }
 
     public interface onItemClickListener{
         void onItemClick(int position);
+        void onDelete(int position);
     }
 
     public void setOnItemClickListener(onItemClickListener listener){

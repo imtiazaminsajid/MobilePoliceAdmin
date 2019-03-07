@@ -13,6 +13,19 @@
         android:background="#FFFCDB"
         android:orientation="vertical">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Crime Details"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:background="#575247"
+            android:textColor="#FFFCDB"
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
+
     <TextView
         android:id="@+id/DetailCrimeType"
         android:layout_width="wrap_content"
@@ -100,6 +113,7 @@
             android:textStyle="bold"
             android:textColor="#4a6ff4"
             android:layout_gravity="center"
+            android:onClick="phoneCall"
             />
 
 
@@ -129,11 +143,12 @@ has selected you to submit a project after evaluating your CV."
         android:id="@+id/map"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Map"
+        android:text="See the Location on Map"
         android:layout_gravity="center"
-        android:background="#575247"
+        android:background="@drawable/button_map"
         android:onClick="map"
         android:layout_marginTop="20dp"
+        android:textColor="#FFFCDB"
         />
 
     </LinearLayout>

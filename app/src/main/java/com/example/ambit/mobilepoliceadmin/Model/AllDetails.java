@@ -1,5 +1,7 @@
 package com.example.ambit.mobilepoliceadmin.Model;
 
+import com.google.firebase.database.Exclude;
+
 public class AllDetails {
 
     private String timeAndDate;
@@ -10,6 +12,8 @@ public class AllDetails {
     private String crimeType;
     private Double lat;
     private Double lon;
+
+    private String key;
 
     public AllDetails() {
     }
@@ -23,6 +27,16 @@ public class AllDetails {
         this.crimeType = crimeType;
         this.lat = lat;
         this.lon = lon;
+    }
+
+    @Exclude
+    public String getKey() {
+        return key;
+    }
+
+    @Exclude
+    public void setKey(String key) {
+        this.key = key;
     }
 
     public String getCrimeType() {

@@ -12,11 +12,14 @@ import android.widget.Toast;
 
 import com.example.ambit.mobilepoliceadmin.Adaptar.Details;
 import com.example.ambit.mobilepoliceadmin.Model.AllDetails;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -31,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
     private DatabaseReference databaseReference;
 
+    private FirebaseStorage firebaseStorage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,13 +47,19 @@ public class MainActivity extends AppCompatActivity {
 
         allDetailsList = new ArrayList<>();
 
+        firebaseStorage =  FirebaseStorage.getInstance();
+
         databaseReference = FirebaseDatabase.getInstance().getReference("Reports");
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                allDetailsList.clear();
+
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()){
                     AllDetails allDetails = dataSnapshot1.getValue(AllDetails.class);
+                    allDetails.setKey(dataSnapshot1.getKey());
                     Collections.reverse(allDetailsList);
                     allDetailsList.add(allDetails);
                     Collections.reverse(allDetailsList);
@@ -70,8 +81,6 @@ public class MainActivity extends AppCompatActivity {
                         double crimeLat =  allDetailsList.get(position).getLat();
                         double crimeLon =  allDetailsList.get(position).getLon();
 
-                        Toast.makeText(MainActivity.this, "How are U"+crimeType, Toast.LENGTH_SHORT).show();
-
                         Intent intent = new Intent(MainActivity.this, CrimeDetails.class);
 
                         intent.putExtra("CrimeType", crimeType);
@@ -83,6 +92,25 @@ public class MainActivity extends AppCompatActivity {
                         intent.putExtra("CrimeLat", crimeLat);
                         intent.putExtra("CrimeLon", crimeLon);
                         startActivity(intent);
+                    }
+
+                    @Override
+                    public void onDelete(int position) {
+
+                        AllDetails allDetailsForDelete = allDetailsList.get(position);
+                        final String key = allDetailsForDelete.getKey();
+
+                        StorageReference storageReference =  firebaseStorage.getReferenceFromUrl(allDetailsForDelete.getImageUrl());
+                        storageReference.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+
+                                databaseReference.child(key).removeValue();
+                                Toast.makeText(MainActivity.this, "You Delete A Data", Toast.LENGTH_SHORT).show();
+
+                            }
+                        });
+
                     }
                 });
 
