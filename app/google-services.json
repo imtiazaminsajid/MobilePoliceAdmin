@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "797134601575",
+    "firebase_url": "https://mobilepolice-e0816.firebaseio.com",
+    "project_id": "mobilepolice-e0816",
+    "storage_bucket": "mobilepolice-e0816.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797134601575:android:1602d8a4c192d312",
+        "android_client_info": {
+          "package_name": "com.example.ambit.mobilepolice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "797134601575-i29uoufldt7ir975gglg9vfspn687mjq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ambit.mobilepolice",
+            "certificate_hash": "eac7d1166b620fa0ff086bea35e3f38b744312b1"
+          }
+        },
+        {
+          "client_id": "797134601575-nnp1ks36htnvdf95msc8alngr5fduetl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJNLyTMzCfB9IrEtOYRt2L8ETYzylH-R4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "797134601575-nnp1ks36htnvdf95msc8alngr5fduetl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797134601575:android:d8cf63a60a85ab63",
+        "android_client_info": {
+          "package_name": "com.example.ambit.mobilepoliceadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "797134601575-pc8v5p3gt6uurf1rnm1m5jm0aumbcjdv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ambit.mobilepoliceadmin",
+            "certificate_hash": "eac7d1166b620fa0ff086bea35e3f38b744312b1"
+          }
+        },
+        {
+          "client_id": "797134601575-nnp1ks36htnvdf95msc8alngr5fduetl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJNLyTMzCfB9IrEtOYRt2L8ETYzylH-R4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "797134601575-nnp1ks36htnvdf95msc8alngr5fduetl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

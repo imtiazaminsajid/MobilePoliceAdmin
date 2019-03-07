@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFCDB"
+    tools:context=".CrimeDetails">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFCDB"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/DetailCrimeType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Khun hoyeche"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#e44444"
+        android:layout_gravity="center"
+        />
+
+
+    <TextView
+        android:id="@+id/DetailCrimeDateANdTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:30PM"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#0d0c0c"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:src="@drawable/location2"/>
+
+        <TextView
+            android:id="@+id/DetailCrimeLocationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gulshan"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#4a6ff4"
+            android:layout_gravity="center"
+            />
+
+
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/DetailsCrimePicture"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"/>
+
+    <!--<ImageView-->
+        <!--android:id="@+id/DetailsCrimePicture"-->
+        <!--android:layout_width="220dp"-->
+        <!--android:layout_height="150dp"-->
+        <!--android:src="@drawable/clock"-->
+        <!--android:layout_gravity="center"-->
+        <!--/>-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/call"/>
+
+        <TextView
+            android:id="@+id/DetailWithnessPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01677006082"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#4a6ff4"
+            android:layout_gravity="center"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/DetailCrime"
+        android:layout_width="330dp"
+        android:autoSizeTextType="uniform"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Congratulation! It is our great pleasure to inform you that you are
+just one step further to attend the final interview to establish
+yourself as a Android Developer of Humac Lab Ltd. Our technical team
+has selected you to submit a project after evaluating your CV."
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#0d0c0c"
+        android:layout_gravity="center"
+        android:gravity="center"
+        />
+
+    <Button
+        android:id="@+id/map"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Map"
+        android:layout_gravity="center"
+        android:background="#575247"
+        android:onClick="map"
+        android:layout_marginTop="20dp"
+        />
+
+    </LinearLayout>
+
+
+
+</ScrollView>
