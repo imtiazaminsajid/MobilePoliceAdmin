@@ -1041,6 +1041,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable button_map
 drawable call
 drawable clock
 drawable common_full_open_on_phone
@@ -1062,6 +1063,7 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable crime_pic
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility

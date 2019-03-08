@@ -6,11 +6,12 @@
     android:layout_margin="5dp"
     android:layout_width="match_parent"
     android:background="#FFFCDB"
+    android:gravity="center"
     android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="185dp"
         android:orientation="horizontal"
         android:background="#FFFCDB"
         android:layout_marginRight="10dp">
@@ -24,10 +25,9 @@
             android:layout_gravity="center_vertical"/>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-
             android:background="#FFFCDB"
             android:layout_marginLeft="10dp">
             <TextView

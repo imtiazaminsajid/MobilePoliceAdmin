@@ -1620,6 +1620,10 @@
         "source": "C:\\Users\\ambit\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\6f0304d331e5f199753911a99242b65c\\res\\color\\abc_primary_text_disable_only_material_light.xml"
     },
     {
+        "merged": "C:\\Users\\ambit\\Desktop\\MobilePoliceAdmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_map.xml.flat",
+        "source": "C:\\Users\\ambit\\Desktop\\MobilePoliceAdmin\\app\\src\\main\\res\\drawable\\button_map.xml"
+    },
+    {
         "merged": "C:\\Users\\ambit\\Desktop\\MobilePoliceAdmin\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_list_menu_item_checkbox.xml.flat",
         "source": "C:\\Users\\ambit\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\6f0304d331e5f199753911a99242b65c\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
@@ -1770,6 +1774,10 @@
     {
         "merged": "C:\\Users\\ambit\\Desktop\\MobilePoliceAdmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_design_ic_visibility_off.png.flat",
         "source": "C:\\Users\\ambit\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\ccc61342b3b969e2127bda5cf41fe82b\\res\\drawable-mdpi-v4\\design_ic_visibility_off.png"
+    },
+    {
+        "merged": "C:\\Users\\ambit\\Desktop\\MobilePoliceAdmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable_crime_pic.jpg.flat",
+        "source": "C:\\Users\\ambit\\Desktop\\MobilePoliceAdmin\\app\\src\\main\\res\\drawable\\crime_pic.jpg"
     },
     {
         "merged": "C:\\Users\\ambit\\Desktop\\MobilePoliceAdmin\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_tabs_ripple_color.xml.flat",

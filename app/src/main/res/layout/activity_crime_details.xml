@@ -35,6 +35,9 @@
         android:textStyle="bold"
         android:textColor="#e44444"
         android:layout_gravity="center"
+        android:background="#fff9b5"
+        android:fontFamily="serif"
+        android:layout_marginTop="8dp"
         />
 
 
@@ -48,6 +51,7 @@
         android:textColor="#0d0c0c"
         android:layout_marginTop="10dp"
         android:layout_gravity="center"
+        android:fontFamily="sans-serif-smallcaps"
         />
 
     <LinearLayout
@@ -71,6 +75,7 @@
             android:textStyle="bold"
             android:textColor="#4a6ff4"
             android:layout_gravity="center"
+            android:fontFamily="monospace"
             />
 
 
@@ -80,7 +85,7 @@
         android:id="@+id/DetailsCrimePicture"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:src="@drawable/ic_launcher_background"
+        android:src="@drawable/crime_pic"
         android:layout_marginTop="10dp"
         android:layout_gravity="center"/>
 
@@ -92,16 +97,28 @@
         <!--android:layout_gravity="center"-->
         <!--/>-->
 
-    <LinearLayout
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Withness Number"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textColor="#864b4b"
+            />
+
+        <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="1dp"
         android:layout_gravity="center">
 
         <ImageView
             android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             android:src="@drawable/call"/>
 
         <TextView
@@ -114,6 +131,8 @@
             android:textColor="#4a6ff4"
             android:layout_gravity="center"
             android:onClick="phoneCall"
+            android:fontFamily="serif-monospace"
+
             />
 
 
@@ -136,6 +155,7 @@ has selected you to submit a project after evaluating your CV."
         android:textStyle="bold"
         android:textColor="#0d0c0c"
         android:layout_gravity="center"
+        android:fontFamily="casual"
         android:gravity="center"
         />
 
@@ -147,9 +167,16 @@ has selected you to submit a project after evaluating your CV."
         android:layout_gravity="center"
         android:background="@drawable/button_map"
         android:onClick="map"
+        android:textAllCaps="false"
         android:layout_marginTop="20dp"
         android:textColor="#FFFCDB"
         />
+
+        <View
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="35dp"
+            />
 
     </LinearLayout>
 

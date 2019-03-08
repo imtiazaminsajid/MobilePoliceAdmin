@@ -52,7 +52,7 @@ public class Details extends RecyclerView.Adapter<Details.MyViewHolder> {
         myViewHolder.crimeLat.setText(allDetails.getLat().toString());
         myViewHolder.crimeLon.setText(allDetails.getLon().toString());
 
-        Picasso.with(context).load(allDetails.getImageUrl()).placeholder(R.mipmap.ic_launcher_round).fit().centerCrop().into(myViewHolder.crimePicture);
+        Picasso.with(context).load(allDetails.getImageUrl()).placeholder(R.drawable.crime_pic).fit().centerCrop().into(myViewHolder.crimePicture);
 
     }
 
